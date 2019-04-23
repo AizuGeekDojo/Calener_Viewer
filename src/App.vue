@@ -17,6 +17,7 @@ export default {
     this.intervalId = setInterval(() => {
       this.check_daytime();
     }, 1000 * 60 * 60);
+    this.check_daytime();
   },
   beforeDestroy() {
     console.log("clearInterval");
