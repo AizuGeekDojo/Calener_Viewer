@@ -25,12 +25,8 @@ export default {
   },
   methods: {
     check_daytime() {
-      let now_hour = new Date().getSeconds();
-      if (now_hour > 18 || now_hour < 7) {
-        this.is_daytime = false;
-      } else {
-        this.is_daytime = true;
-      }
+      let now_hour = new Date().getHours();
+      this.is_daytime = !(now_hour > 18 || now_hour < 7);
     }
   }
 };
@@ -75,9 +71,5 @@ body {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-}
-
-.daytime_display {
-  margin-top: 50px;
 }
 </style>

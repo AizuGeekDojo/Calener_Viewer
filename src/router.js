@@ -12,6 +12,11 @@ export default new Router({
       path: "/",
       name: "home",
       component: Home
+    },
+    {
+      path: "/youtube",
+      name: "youtube",
+      component: () => import("./views/youtube")
     }
   ]
 });
